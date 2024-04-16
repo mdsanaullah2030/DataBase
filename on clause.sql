@@ -1,9 +1,4 @@
-select JOB_TITLE,DEPARTMENT_NAME,LAST_NAME,START_DATE
-from EMPLOYEES e  join DEPARTMENTS d 
-on e.department_id=d.DEPARTMENT_ID
-JOIN JOBS j 
-on e.JOB_ID=j.JOB_ID
-JOIN JOB_HISTORY h
-on e.EMPLOYEE_ID=h.EMPLOYEE_ID;
-
+select h.JOB_ID,h.first_name
+from EMPLOYEES e join JOB_HISTORY h
+on e.JOB_ID=h.JOB_ID;
 
